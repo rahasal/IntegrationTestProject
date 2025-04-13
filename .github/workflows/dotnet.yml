@@ -5,7 +5,7 @@ name: .NET build for Test-Driven Developement
 
 on:
   pull_request:
-    branches: ["master"]
+    branches: [ "master" ]
 
 jobs:
   build:
