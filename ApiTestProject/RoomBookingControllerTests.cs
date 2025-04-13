@@ -29,7 +29,7 @@ namespace ApiTestProject
             var loggerMock = new Mock<ILogger<WeatherForecastController>>();
             var controller = new WeatherForecastController(loggerMock.Object);
             var result = controller.Get();
-            result.Count().ShouldBeGreaterThan(1);
+            result.Count().ShouldBeGreaterThan(1);  
             result.ShouldNotBeNull();
 
         }
