@@ -12,7 +12,7 @@ namespace RoomBookingApp.Persistence.Repositories
         }
         public IEnumerable<Room> GetAvailableRooms(DateTime date)
         {
-           var availableRooms = _context.Rooms.ToList();
+           var availableRooms = _context.Rooms.Where(q=>!q.RoomBooking.Any(x=>x.Date == date)).ToList();
 
             return availableRooms;
         }
